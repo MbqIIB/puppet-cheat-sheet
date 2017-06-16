@@ -75,20 +75,6 @@ server = <PUPPET_SERVER>              # default is "puppet"
 
 ### Troubleshooting
 
-Connection To The Puppet Master:
-~~~~
-ping IP                               # make sure puppet master is reachable via IP first
-ping puppet                           # make sure short domain name can reach the puppet master
-ping puppet.example.com               # makesure FQDN can reach the puppet master
-vi /etc/hosts			                    # check that both FQDN / Short Domain name are entered on client side DNS
-nslookup puppet.example.com           # if using DNS Server Side then check if you can reach the nameservers + name
-vi /etc/resolv.conf                   # if using DNS Server Side check dns configuration is correct
-service network restart               # restart connection check if any errors
-vi /etc/puppetlabs/puppet/puppet.conf # if using a custom puppet server check config to see if configured correctly to non default server
-telnet puppet.example.com 8140        # test connection to puppet server for port 8140
-date -R                               # if time is out of sync, get it in sync with the puppet master
-~~~~
-
 SSL Regeneration:
 ~~~~
 Run the following on the master:
