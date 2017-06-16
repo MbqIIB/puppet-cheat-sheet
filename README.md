@@ -14,7 +14,7 @@ chkconfig puppet on          # enable puppet agent service on boot
 
 Managing Certificates (Master):
 ~~~~
-puppet cert list		   # lists available nodes to sign
+puppet cert list           # lists available nodes to sign
 puppet cert list --all     # lists all signed nodes
 puppet cert sign <name>    # manually sign specific node
 puppet cert sign --all     # sign all nodes
@@ -28,10 +28,10 @@ puppet node clean <name>   # removes node + cert
 
 Managing Modules (Master):
 ~~~~
-puppet module list	            # lists current installed modules
+puppet module list              # lists current installed modules
 puppet module install <name>    # downloads/installs modules from http://forge.puppetlabs.com
 puppet module uninstall <name>  # removes/deletes module
-puppet module upgrade <name>	  # upgrades to new version of module
+puppet module upgrade <name>    # upgrades to new version of module
 puppet module search <name>     # search modules from http://forge.puppetlabs.com
 ~~~~
 
@@ -58,21 +58,21 @@ Changing Puppet Agent Run Interval (Master/Node):
 ~~~~
 vi /etc/puppetlabs/puppet/puppet.conf
 [agent]
-runinterval = 1800					           # default is every 30minutes (1800 seconds)
+runinterval = 1800                    # default is every 30minutes (1800 seconds)
 ~~~
 
 Changing Puppet Agent Environment(Master/Node):
 ~~~~
 vi /etc/puppetlabs/puppet/puppet.conf
 [main]
-environment = <ENVIRONMENT>            # default is "production"
+environment = <ENVIRONMENT>           # default is "production"
 ~~~~
 
 Changing Puppet Agent Default Puppet Master Server(Master/Node):
 ~~~~
 vi /etc/puppetlabs/puppet/puppet.conf
 [main]
-server = <PUPPET_SERVER>               # default is "puppet"
+server = <PUPPET_SERVER>              # default is "puppet"
 ~~~~
 
 ### <span style="color:purple">Troubleshooting</span>
