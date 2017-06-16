@@ -57,7 +57,7 @@ Changing Puppet Agent Run Interval (Master/Node):
 vi /etc/puppetlabs/puppet/puppet.conf
 [agent]
 runinterval = 1800                    # default is every 30minutes (1800 seconds)
-~~~
+~~~~
 
 Changing Puppet Agent Environment(Master/Node):
 ~~~~
