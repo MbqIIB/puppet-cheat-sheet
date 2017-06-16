@@ -1,8 +1,6 @@
 # puppet-cheat-sheet
 
-# <span style="color:purple">Puppet Cheat Sheet</span>
-
-### <span style="color:purple">Managing Puppet</span>
+### Managing Puppet
 
 Managing Puppet Services:
 ~~~~
@@ -46,7 +44,7 @@ puppet agent -t --noop /path/to/puppetcode.pp  # see what puppet is going to cha
 puppet agent --configprint runinterval         # check runtime interval
 ~~~~
 
-### <span style="color:purple">Configuring Puppet</span>
+### Configuring Puppet
 
 Setup Auto Cert Sign on Puppet Master (Master):
 ~~~~
@@ -75,7 +73,7 @@ vi /etc/puppetlabs/puppet/puppet.conf
 server = <PUPPET_SERVER>              # default is "puppet"
 ~~~~
 
-### <span style="color:purple">Troubleshooting</span>
+### Troubleshooting
 
 Connection To The Puppet Master:
 ~~~~
