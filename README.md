@@ -72,14 +72,3 @@ vi /etc/puppetlabs/puppet/puppet.conf
 [main]
 server = <PUPPET_SERVER>              # default is "puppet"
 ~~~~
-
-### Troubleshooting
-
-SSL Regeneration:
-~~~~
-Run the following on the master:
-puppet cert clean node.example.com            # clean node on master
-Then, run the following on the agent node:
-rm -rf $(puppet agent --configprint ssldir)   # Remove SSL Certificate
-puppet agent --test                           # run puppet agent
-~~~~
