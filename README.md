@@ -91,9 +91,8 @@ date -R                               # if time is out of sync, get it in sync w
 
 SSL Regeneration:
 ~~~~
-Run the following on the master:
-puppet cert clean node.example.com            # clean node on master
-Then, run the following on the agent node:
-rm -rf $(puppet agent --configprint ssldir)   # Remove SSL Certificate
-puppet agent --test                           # run puppet agent
+puppet cert clean node.example.com            # clean node (Master)
+
+rm -rf $(puppet agent --configprint ssldir)   # remove SSL certificate (Node)
+puppet agent --test                           # run puppet agent (Node)
 ~~~~
